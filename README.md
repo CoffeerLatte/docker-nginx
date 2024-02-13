@@ -5,3 +5,6 @@
 # Version
 ### v0.2.0
 - [ ] push index.html to docker hub
+
+### v0.3.0
+- [ ] deploy fly.io

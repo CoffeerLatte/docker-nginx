@@ -1,0 +1,20 @@
+# fly.toml app configuration file generated for blog-jsm on 2024-02-14T10:01:49+09:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'blog-jsm'
+primary_region = 'nrt'
+
+[build]
+  image="jeonseungmin/blog:0.1.0"
+[http_service]
+  internal_port = 80
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  size = 'shared-cpu-1x'
